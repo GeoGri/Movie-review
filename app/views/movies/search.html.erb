@@ -1,0 +1,7 @@
+<div class="container-fluid bg-silver">
+  <% @movies.each do |movie| %>
+    <div class="col-sm-6 col-md-3" style="margin-top:40px">
+        <%= link_to (image_tag movie.image.url(:medium), class: 'image img-responsive'), movie %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,168 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.btn {
+            border:2px solid #fb0000;
+            background: transparent;
+            color: #fff;
+            text-align: center;
+            transition: all 0.3s ease-in-out 0.3s;
+        }
+        .btn:hover {
+            color: #fff;
+            background: #fb0000;
+        }
+        
+.btn-red{
+    text-align: center;
+    border:2px solid #fb0000;
+    color: #fff;
+    background: #fb0000;
+}
+
+body {
+    font-size: 14px;
+    background-color: #3c3c3c;
+    color:#fff;
+}
+
+
+       .navbar {
+            margin-bottom: 0;
+            background-color: #2b2b2b;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px;
+            line-height: 1.42857143;
+            letter-spacing: 4px;
+            border-radius: 0;
+            text-transform: uppercase;
+        }
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff ;
+            font-weight: bold;
+            padding-left: 2px !important;
+            padding-right: 2px !important;
+            margin: 0px 14px;
+            border-color: transparent;
+        }
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #fb0000;
+            background-color: #2b2b2b;
+            border-bottom: 2px solid #fb0000;
+        }
+        .navbar-default .navbar-toggle {
+            border-bottom: #fb0000;
+            background:  #2b2b2b;
+            color: #fb0000;
+        }.bg-silver {
+            background-color: #3c3c3c;
+            color: #fff;
+       }
+       .bg-silver-dark {
+            background-color: #333333;
+            color: #fff;
+       }
+       
+       .container-fluid {
+            padding: 60px 50px;
+       }
+       
+       
+       
+        h1.section-title {
+            text-transform: uppercase;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 92px;
+            margin-top: 16px;
+        }
+        h1.section-title:after{
+            position: relative;
+            content:'';
+            display:block;
+            width: 40px;
+            height: 2px;
+            background: #fb0000;
+            left: 50%;
+            margin-left: -20px;
+            margin-top: 26px;
+        }
+        .img-responsive {
+            box-shadow: 10px 10px 5px #2b2b2b;
+        }
+        
+        .bg-cinema {
+            position: relative;
+            background-size: cover;
+            background-image: url("/assets/cinema.JPG");
+        }
+        
+
+         
+        footer {
+            padding-top:10px;
+            background-color: #2b2b2b;
+        }
+        footer p {
+            color: #fff;
+        }
+        footer a {
+            color:#fb0000;
+        }
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #fb0000;
+        }
+        .footer-line {
+            height: 3px;
+            background: #fb0000;
+            bottom: 0;
+        }
+        
+        .div-center{
+            position: absolute;
+        top: 50%;
+        margin-top: -220px;
+        width: 100%;
+}
+
+.div-center-minus{
+        position: absolute;
+        top: 50%;
+        margin-top: -290px;
+        width: 100%;
+}
+
+.div-center-edit{
+        position: absolute;
+        top: 50%;
+        margin-top: -330px;
+        width: 100%;
+}
+
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #fb0000;
+}

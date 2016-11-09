@@ -1,0 +1,16 @@
+[2016-06-29 16:15:44,091][INFO ][node                     ] [Dragon Man] version[2.3.3], pid[3101], build[218bdf1/2016-05-17T15:40:04Z]
+[2016-06-29 16:15:44,095][INFO ][node                     ] [Dragon Man] initializing ...
+[2016-06-29 16:15:45,003][INFO ][plugins                  ] [Dragon Man] modules [lang-groovy, reindex, lang-expression], plugins [], sites []
+[2016-06-29 16:15:45,107][INFO ][env                      ] [Dragon Man] using [1] data paths, mounts [[/ (none)]], net usable_space [1.7gb], net total_space [2.1gb], spins? [possibly], types [aufs]
+[2016-06-29 16:15:45,107][INFO ][env                      ] [Dragon Man] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-06-29 16:15:45,107][WARN ][env                      ] [Dragon Man] max file descriptors [8192] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-06-29 16:15:48,054][INFO ][node                     ] [Dragon Man] initialized
+[2016-06-29 16:15:48,055][INFO ][node                     ] [Dragon Man] starting ...
+[2016-06-29 16:15:48,183][INFO ][transport                ] [Dragon Man] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-06-29 16:15:48,191][INFO ][discovery                ] [Dragon Man] elasticsearch/j1qc-w5NTN65AwytWSGSaw
+[2016-06-29 16:15:51,249][INFO ][cluster.service          ] [Dragon Man] new_master {Dragon Man}{j1qc-w5NTN65AwytWSGSaw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-06-29 16:15:51,269][INFO ][http                     ] [Dragon Man] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-06-29 16:15:51,269][INFO ][node                     ] [Dragon Man] started
+[2016-06-29 16:15:51,354][INFO ][gateway                  ] [Dragon Man] recovered [1] indices into cluster_state
+[2016-06-29 16:15:52,322][INFO ][cluster.routing.allocation] [Dragon Man] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies_development_20160612113208392][3]] ...]).
+[2016-06-29 19:42:22,342][INFO ][monitor.jvm              ] [Dragon Man] [gc][young][12377][10] duration [782ms], collections [1]/[1s], total [782ms]/[2.5s], memory [106.5mb]->[47.6mb]/[989.8mb], all_pools {[young] [67mb]->[2.3mb]/[273mb]}{[survivor] [8.5mb]->[8.5mb]/[34.1mb]}{[old] [31mb]->[36.7mb]/[682.6mb]}

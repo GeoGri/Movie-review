@@ -1,0 +1,16 @@
+[2016-06-20 15:25:52,552][INFO ][node                     ] [Jeanne-Marie Beaubier] version[2.3.3], pid[11439], build[218bdf1/2016-05-17T15:40:04Z]
+[2016-06-20 15:25:52,556][INFO ][node                     ] [Jeanne-Marie Beaubier] initializing ...
+[2016-06-20 15:25:54,992][INFO ][plugins                  ] [Jeanne-Marie Beaubier] modules [lang-groovy, reindex, lang-expression], plugins [], sites []
+[2016-06-20 15:25:55,074][INFO ][env                      ] [Jeanne-Marie Beaubier] using [1] data paths, mounts [[/ (none)]], net usable_space [1.7gb], net total_space [2.1gb], spins? [possibly], types [aufs]
+[2016-06-20 15:25:55,075][INFO ][env                      ] [Jeanne-Marie Beaubier] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-06-20 15:25:55,077][WARN ][env                      ] [Jeanne-Marie Beaubier] max file descriptors [8192] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-06-20 15:25:59,294][INFO ][node                     ] [Jeanne-Marie Beaubier] initialized
+[2016-06-20 15:25:59,295][INFO ][node                     ] [Jeanne-Marie Beaubier] starting ...
+[2016-06-20 15:25:59,611][INFO ][transport                ] [Jeanne-Marie Beaubier] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-06-20 15:25:59,623][INFO ][discovery                ] [Jeanne-Marie Beaubier] elasticsearch/LjNrXAvAQ_eIUlJYLMu13g
+[2016-06-20 15:26:02,710][INFO ][cluster.service          ] [Jeanne-Marie Beaubier] new_master {Jeanne-Marie Beaubier}{LjNrXAvAQ_eIUlJYLMu13g}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-06-20 15:26:02,735][INFO ][http                     ] [Jeanne-Marie Beaubier] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-06-20 15:26:02,736][INFO ][node                     ] [Jeanne-Marie Beaubier] started
+[2016-06-20 15:26:02,939][INFO ][gateway                  ] [Jeanne-Marie Beaubier] recovered [1] indices into cluster_state
+[2016-06-20 15:26:04,223][INFO ][cluster.routing.allocation] [Jeanne-Marie Beaubier] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies_development_20160612113208392][3]] ...]).
+[2016-06-20 16:06:29,337][WARN ][monitor.jvm              ] [Jeanne-Marie Beaubier] [gc][young][2424][6] duration [2.1s], collections [1]/[2.8s], total [2.1s]/[3.1s], memory [93.9mb]->[29mb]/[989.8mb], all_pools {[young] [67.3mb]->[318.2kb]/[273mb]}{[survivor] [8mb]->[8mb]/[34.1mb]}{[old] [18.5mb]->[20.6mb]/[682.6mb]}

@@ -1,0 +1,33 @@
+[2016-06-30 09:14:48,186][INFO ][node                     ] [Flash Thompson] version[2.3.3], pid[4611], build[218bdf1/2016-05-17T15:40:04Z]
+[2016-06-30 09:14:48,189][INFO ][node                     ] [Flash Thompson] initializing ...
+[2016-06-30 09:14:48,960][INFO ][plugins                  ] [Flash Thompson] modules [lang-groovy, reindex, lang-expression], plugins [], sites []
+[2016-06-30 09:14:49,004][INFO ][env                      ] [Flash Thompson] using [1] data paths, mounts [[/ (none)]], net usable_space [1.7gb], net total_space [2.1gb], spins? [possibly], types [aufs]
+[2016-06-30 09:14:49,004][INFO ][env                      ] [Flash Thompson] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-06-30 09:14:49,004][WARN ][env                      ] [Flash Thompson] max file descriptors [8192] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-06-30 09:14:51,468][INFO ][node                     ] [Flash Thompson] initialized
+[2016-06-30 09:14:51,468][INFO ][node                     ] [Flash Thompson] starting ...
+[2016-06-30 09:14:51,621][INFO ][transport                ] [Flash Thompson] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-06-30 09:14:51,626][INFO ][discovery                ] [Flash Thompson] elasticsearch/D7KSetSkQqyTMq3PuLEboQ
+[2016-06-30 09:14:54,828][INFO ][cluster.service          ] [Flash Thompson] new_master {Flash Thompson}{D7KSetSkQqyTMq3PuLEboQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-06-30 09:14:54,938][INFO ][http                     ] [Flash Thompson] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-06-30 09:14:54,941][INFO ][node                     ] [Flash Thompson] started
+[2016-06-30 09:14:54,982][INFO ][gateway                  ] [Flash Thompson] recovered [1] indices into cluster_state
+[2016-06-30 09:14:56,318][INFO ][cluster.routing.allocation] [Flash Thompson] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies_development_20160612113208392][4]] ...]).
+[2016-06-30 13:02:02,678][INFO ][node                     ] [Rusty Collins] version[2.3.3], pid[9239], build[218bdf1/2016-05-17T15:40:04Z]
+[2016-06-30 13:02:02,681][INFO ][node                     ] [Rusty Collins] initializing ...
+[2016-06-30 13:02:41,003][INFO ][plugins                  ] [Rusty Collins] modules [lang-groovy, reindex, lang-expression], plugins [], sites []
+[2016-06-30 13:02:41,122][INFO ][env                      ] [Rusty Collins] using [1] data paths, mounts [[/ (none)]], net usable_space [1.7gb], net total_space [2.1gb], spins? [possibly], types [aufs]
+[2016-06-30 13:02:41,122][INFO ][env                      ] [Rusty Collins] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-06-30 13:02:41,124][WARN ][env                      ] [Rusty Collins] max file descriptors [8192] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-06-30 13:02:45,328][INFO ][node                     ] [Rusty Collins] initialized
+[2016-06-30 13:02:45,331][INFO ][node                     ] [Rusty Collins] starting ...
+[2016-06-30 13:02:45,758][INFO ][transport                ] [Rusty Collins] publish_address {127.0.0.1:9301}, bound_addresses {127.0.0.1:9301}, {[::1]:9301}
+[2016-06-30 13:02:45,792][INFO ][discovery                ] [Rusty Collins] elasticsearch/2l_UTegZRuKzPKGVfR_koA
+[2016-06-30 13:02:51,891][INFO ][cluster.service          ] [Flash Thompson] added {{Rusty Collins}{2l_UTegZRuKzPKGVfR_koA}{127.0.0.1}{127.0.0.1:9301},}, reason: zen-disco-join(join from node[{Rusty Collins}{2l_UTegZRuKzPKGVfR_koA}{127.0.0.1}{127.0.0.1:9301}])
+[2016-06-30 13:02:52,268][INFO ][cluster.service          ] [Rusty Collins] detected_master {Flash Thompson}{D7KSetSkQqyTMq3PuLEboQ}{127.0.0.1}{127.0.0.1:9300}, added {{Flash Thompson}{D7KSetSkQqyTMq3PuLEboQ}{127.0.0.1}{127.0.0.1:9300},}, reason: zen-disco-receive(from master [{Flash Thompson}{D7KSetSkQqyTMq3PuLEboQ}{127.0.0.1}{127.0.0.1:9300}])
+[2016-06-30 13:02:59,167][INFO ][http                     ] [Rusty Collins] publish_address {127.0.0.1:9201}, bound_addresses {127.0.0.1:9201}, {[::1]:9201}
+[2016-06-30 13:02:59,177][INFO ][node                     ] [Rusty Collins] started
+[2016-06-30 13:03:03,219][INFO ][cluster.routing.allocation] [Flash Thompson] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[movies_development_20160612113208392][4]] ...]).
+[2016-06-30 13:05:07,398][WARN ][monitor.jvm              ] [Flash Thompson] [gc][young][13788][8] duration [1.5s], collections [1]/[2.6s], total [1.5s]/[2s], memory [105.8mb]->[45.5mb]/[989.8mb], all_pools {[young] [68.2mb]->[326.3kb]/[273mb]}{[survivor] [8.5mb]->[7.9mb]/[34.1mb]}{[old] [29.1mb]->[37.3mb]/[682.6mb]}
+[2016-06-30 13:38:35,337][WARN ][monitor.jvm              ] [Rusty Collins] [gc][young][2138][6] duration [3.9s], collections [1]/[4.3s], total [3.9s]/[4.2s], memory [95.3mb]->[30.3mb]/[989.8mb], all_pools {[young] [68.3mb]->[700.9kb]/[273mb]}{[survivor] [8.5mb]->[8.4mb]/[34.1mb]}{[old] [18.5mb]->[21.2mb]/[682.6mb]}
+[2016-06-30 13:56:43,778][WARN ][monitor.jvm              ] [Flash Thompson] [gc][young][16874][9] duration [1.3s], collections [1]/[2.1s], total [1.3s]/[3.3s], memory [113.5mb]->[51.4mb]/[989.8mb], all_pools {[young] [68.3mb]->[409.2kb]/[273mb]}{[survivor] [7.9mb]->[8.5mb]/[34.1mb]}{[old] [37.3mb]->[42.5mb]/[682.6mb]}

@@ -1,0 +1,16 @@
+[2016-06-13 20:29:23,364][INFO ][node                     ] [Bobster] version[2.3.3], pid[17381], build[218bdf1/2016-05-17T15:40:04Z]
+[2016-06-13 20:29:23,367][INFO ][node                     ] [Bobster] initializing ...
+[2016-06-13 20:29:24,224][INFO ][plugins                  ] [Bobster] modules [lang-groovy, reindex, lang-expression], plugins [], sites []
+[2016-06-13 20:29:24,283][INFO ][env                      ] [Bobster] using [1] data paths, mounts [[/ (none)]], net usable_space [1.7gb], net total_space [2.1gb], spins? [possibly], types [aufs]
+[2016-06-13 20:29:24,284][INFO ][env                      ] [Bobster] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-06-13 20:29:24,284][WARN ][env                      ] [Bobster] max file descriptors [8192] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-06-13 20:29:27,383][INFO ][node                     ] [Bobster] initialized
+[2016-06-13 20:29:27,384][INFO ][node                     ] [Bobster] starting ...
+[2016-06-13 20:29:27,565][INFO ][transport                ] [Bobster] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-06-13 20:29:27,598][INFO ][discovery                ] [Bobster] elasticsearch/b91tf1PnSTiJUqlCgDsn4Q
+[2016-06-13 20:29:30,807][INFO ][cluster.service          ] [Bobster] new_master {Bobster}{b91tf1PnSTiJUqlCgDsn4Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-06-13 20:29:30,824][INFO ][http                     ] [Bobster] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-06-13 20:29:30,825][INFO ][node                     ] [Bobster] started
+[2016-06-13 20:29:30,906][INFO ][gateway                  ] [Bobster] recovered [1] indices into cluster_state
+[2016-06-13 20:29:31,828][INFO ][cluster.routing.allocation] [Bobster] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies_development_20160612113208392][4]] ...]).
+[2016-06-13 22:43:11,116][WARN ][monitor.jvm              ] [Bobster] [gc][young][7973][6] duration [4.1s], collections [1]/[5.2s], total [4.1s]/[4.3s], memory [98.6mb]->[36mb]/[989.8mb], all_pools {[young] [68.2mb]->[556.1kb]/[273mb]}{[survivor] [8.4mb]->[8.5mb]/[34.1mb]}{[old] [21.8mb]->[26.9mb]/[682.6mb]}

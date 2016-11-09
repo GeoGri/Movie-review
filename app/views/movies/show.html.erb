@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<head>
+    <!-- Theme Movie Page -->
+    <title>Bootstrap Theme Movie Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        body {
+            font-size: 14px;
+            background-color: #3c3c3c;
+        }
+       .creating-text {
+            border-left: 1px dotted #fb0000;
+            padding-left: 20px;
+            margin-bottom: 25px;
+            line-height: normal;
+       }
+       #description{
+            margin-bottom: 25px;
+       }
+       #player{
+            position: relative;
+            background-size: cover;
+            background-image: url("/assets/NYC-taxi.jpg");
+       }
+       .general-star {
+            border: 2px solid #333333;
+            padding: 14px 20px;
+            width:30%;
+       }
+       .jumbotron {
+            background-color: #f4511e;
+            color: #fff;                 <!-- text-color -->
+            padding: 100px 25px;
+       }
+      
+        .embed-container iframe {
+            min-height: 490px;
+            width: 60%;
+        }
+        .second-nav {
+            border-top: 1px dotted #fb0000;
+        }
+    </style>
+    
+ </head>
+               <!-- Scrollspy navbar -> to section -->
+ <body id="moviePage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-defoult navbar-fixed-top second-nav" role="navigation" style="margin-top:50px">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#movieNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#moviePage"><%= @movie.title %></a>
+            </div>
+            <div class="collapse navbar-collapse" id="movieNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#player">PLAYER</a></li>
+                    <li><a href="#reviews">REVIEWS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- End Navbar -->
+  
+        <!-- Container Movie-name -->
+    <div class="text-center container-fluid bg-silver-dark" style="margin-top:-30px">
+       <h1><%= @movie.title %></h1>
+    </div>
+
+        <!-- Container (About Section) -->
+    <div class="container-fluid bg-silver" id="about">
+        <h1 class="section-title text-center">ABOUT THE FILM</h1>
+
+        <div class="row">
+            <div class="container">
+
+                <div class="col-lg-6" >
+                    <%= image_tag @movie.image.url(:medium), class:"img-responsive" %>
+                </div>
+
+                <div class="col-lg-6">
+
+                    <h1 class="review-title"><%= @movie.title %></h1>
+                    <h5 class="creating-text">
+                        Published: <%= time_ago_in_words(@movie.created_at)%>
+                        </br>
+                        Add by: <%= @user_email%>
+                    </h5>
+
+                    <div class="table-responsive" style="margin-bottom: 25px;">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Year:</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</td>
+                                    <td><%= @movie.year %></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Director:</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</td>
+                                    <td><%= @movie.director %></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Scenario:</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</td>
+                                    <td><%= @movie.scenario %></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Kind:</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</td>
+                                    <td><%= @movies_kind %></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Premiere:</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</td>
+                                    <td><%= @movie.premiere_date %></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Time:</strong></td>
+                                    <td>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;</td>
+                                    <td><%= @movie.movie_length %> h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p id="description"><%= @movie.description %></p>
+                    <h4 id="count_review"><%= "#{@reviews.length} rewiews" %></h4>
+                    <row class="text-center">
+
+                        <div class="star-rating general-star col-md-6" data-score= <%= @average_review %>></div>
+                        <div class="col-md-6" style="margin-top:8px">
+                                         <!-- edit movie -->
+                            <% if current_user != nil %>
+                                <% if current_user.id == @movie.user_id %>
+                                    <%= link_to 'Edit movie details', edit_movie_path(@movie), class:"btn" %>
+                                <% end %> 
+                            <% end %>
+                        </div>
+                    </row>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <!-- Container (Player Section) -->
+    <div class="container-fluid bg-silver-dark text-center" id="player">
+        <% if @movie.trailer_src != nil %>
+        <h1 class="section-title">WANT TO SEE?</h2>
+        <div class="embed-container">
+            <iframe width="560" height="315" src="<%= @movie.trailer_src %>" frameborder="0" allowfullscreen ></iframe>
+        </div>
+        <% else %>
+        <h1 class="section-title">There is no trailer yet.</h2>
+        <% end %>
+    </div>
+
+       <!-- Container (Reviews Section) -->
+    <div class="container-fluid bg-silver" id="reviews">
+        <h1 class="section-title">REVIEWS</h2>
+        <div class="col-md-3"></div>
+            <row class="text-center center-block">
+                                    <!-- no-reviews -->
+                <div class="text-cente col-md-6 center-block">
+                    
+                    <!-- reviews -->
+                    <h1 style="margin:60px">
+                        Average rating: 
+                        <span style="color:#fb0000" id="average_review"><%=@average_review%></span>
+                    </h1>
+                    <% if @reviews.blank? %>
+                        <h4 id="reviews_header">No reviews just yet, would you like to add the first!</h3>
+                    <% else %> 
+                        <h4 id="reviews_header">Review users who seen this movie:</h4>
+                    <% end %>
+                    <div class="review_list">
+                            <%= render @reviews %>
+                        </div>
+                        </br>
+                    <% if current_user != nil %>
+                            <%= form_for [@movie, Review.new], remote: true do |f| %>
+                                <div class="field">
+                                    <div class="star-change-rating" required="" id="stars"></div>
+                                </div>
+                                <div class="field form-group">
+                                    <%= f.label :comment %><br>
+                                    <%= f.text_area :comment, class:"form-control", id:"review_area", style:"min-height:200px", placeholder:"Tap to add new review" %>
+                                </div>
+                                <div class="actions">
+                                    <%= f.submit class: "btn", value:"CREATE REVIEW"%>
+                                </div>
+                            <% end %>
+                    <% else %>
+                        <%= link_to 'Write review', new_movie_review_path(@movie), class: "btn" %>
+                    <% end %>
+                </div>
+            </row>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    
+    
+          <!-- Footer -->
+    <footer class="text-center">
+        <a href="#moviePage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>This site was made by GeoGri <a href="https://www.facebook.com/Gri.Geo?ref=bookmarks" title="Visit Facebook">www.facebook.com</a>
+        </p> 
+        <div class="footer-line"></div>
+    </footer>
+
+    <!-- smooth scrolling -->
+    <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#moviePage']").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== ""){
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function(){
+   
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        })
+    </script>
+    
+    <script>
+        $('.star-rating').raty({
+            path: "/assets/",
+            readOnly: true,
+            score: function(){
+                return $(this).attr('data-score');
+            }
+        });
+    </script>
+
+    <script>
+        $('.star-change-rating').raty({
+            path: "/assets/",
+            scoreName: 'review[rating]' // Name of the hidden field that holds the score value.
+        });
+    </script>
+ </body>
+</html>
+

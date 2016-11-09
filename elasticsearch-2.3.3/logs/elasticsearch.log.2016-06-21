@@ -1,0 +1,16 @@
+[2016-06-21 21:03:47,460][INFO ][node                     ] [Witchfire] version[2.3.3], pid[26430], build[218bdf1/2016-05-17T15:40:04Z]
+[2016-06-21 21:03:47,465][INFO ][node                     ] [Witchfire] initializing ...
+[2016-06-21 21:03:54,474][INFO ][plugins                  ] [Witchfire] modules [lang-groovy, reindex, lang-expression], plugins [], sites []
+[2016-06-21 21:03:54,541][INFO ][env                      ] [Witchfire] using [1] data paths, mounts [[/ (none)]], net usable_space [1.7gb], net total_space [2.1gb], spins? [possibly], types [aufs]
+[2016-06-21 21:03:54,542][INFO ][env                      ] [Witchfire] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-06-21 21:03:54,543][WARN ][env                      ] [Witchfire] max file descriptors [8192] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-06-21 21:03:57,383][INFO ][node                     ] [Witchfire] initialized
+[2016-06-21 21:03:57,383][INFO ][node                     ] [Witchfire] starting ...
+[2016-06-21 21:03:57,631][INFO ][transport                ] [Witchfire] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-06-21 21:03:57,644][INFO ][discovery                ] [Witchfire] elasticsearch/pry8NDzrRlulFLetWia6cg
+[2016-06-21 21:04:00,708][INFO ][cluster.service          ] [Witchfire] new_master {Witchfire}{pry8NDzrRlulFLetWia6cg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-06-21 21:04:00,730][INFO ][http                     ] [Witchfire] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-06-21 21:04:00,730][INFO ][node                     ] [Witchfire] started
+[2016-06-21 21:04:00,798][INFO ][gateway                  ] [Witchfire] recovered [1] indices into cluster_state
+[2016-06-21 21:04:01,806][INFO ][cluster.routing.allocation] [Witchfire] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies_development_20160612113208392][4]] ...]).
+[2016-06-21 21:22:03,491][INFO ][monitor.jvm              ] [Witchfire] [gc][young][1082][6] duration [740ms], collections [1]/[1s], total [740ms]/[3s], memory [95.2mb]->[28.3mb]/[989.8mb], all_pools {[young] [68.3mb]->[174.1kb]/[273mb]}{[survivor] [8.3mb]->[7.5mb]/[34.1mb]}{[old] [18.6mb]->[20.6mb]/[682.6mb]}

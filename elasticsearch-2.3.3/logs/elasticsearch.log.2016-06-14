@@ -1,0 +1,17 @@
+[2016-06-14 08:13:05,456][INFO ][node                     ] [Mikhail Rasputin] version[2.3.3], pid[3895], build[218bdf1/2016-05-17T15:40:04Z]
+[2016-06-14 08:13:05,457][INFO ][node                     ] [Mikhail Rasputin] initializing ...
+[2016-06-14 08:13:06,330][INFO ][plugins                  ] [Mikhail Rasputin] modules [lang-groovy, reindex, lang-expression], plugins [], sites []
+[2016-06-14 08:13:06,396][INFO ][env                      ] [Mikhail Rasputin] using [1] data paths, mounts [[/ (none)]], net usable_space [1.7gb], net total_space [2.1gb], spins? [possibly], types [aufs]
+[2016-06-14 08:13:06,397][INFO ][env                      ] [Mikhail Rasputin] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-06-14 08:13:06,397][WARN ][env                      ] [Mikhail Rasputin] max file descriptors [8192] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-06-14 08:13:09,345][INFO ][node                     ] [Mikhail Rasputin] initialized
+[2016-06-14 08:13:09,345][INFO ][node                     ] [Mikhail Rasputin] starting ...
+[2016-06-14 08:13:09,540][INFO ][transport                ] [Mikhail Rasputin] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-06-14 08:13:09,548][INFO ][discovery                ] [Mikhail Rasputin] elasticsearch/oXovRDEjSkKJK0DpQcKeUg
+[2016-06-14 08:13:12,700][INFO ][cluster.service          ] [Mikhail Rasputin] new_master {Mikhail Rasputin}{oXovRDEjSkKJK0DpQcKeUg}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-06-14 08:13:12,717][INFO ][http                     ] [Mikhail Rasputin] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-06-14 08:13:12,717][INFO ][node                     ] [Mikhail Rasputin] started
+[2016-06-14 08:13:12,797][INFO ][gateway                  ] [Mikhail Rasputin] recovered [1] indices into cluster_state
+[2016-06-14 08:13:13,614][INFO ][cluster.routing.allocation] [Mikhail Rasputin] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies_development_20160612113208392][2], [movies_development_20160612113208392][2]] ...]).
+[2016-06-14 11:54:09,242][WARN ][monitor.jvm              ] [Mikhail Rasputin] [gc][young][13247][7] duration [2.5s], collections [1]/[3.1s], total [2.5s]/[3.7s], memory [99.3mb]->[40.9mb]/[989.8mb], all_pools {[young] [66.7mb]->[472.5kb]/[273mb]}{[survivor] [8.5mb]->[8.5mb]/[34.1mb]}{[old] [24.1mb]->[31.9mb]/[682.6mb]}
+[2016-06-14 15:03:20,369][WARN ][monitor.jvm              ] [Mikhail Rasputin] [gc][young][24586][9] duration [2.4s], collections [1]/[2.5s], total [2.4s]/[6.2s], memory [112.2mb]->[51.7mb]/[989.8mb], all_pools {[young] [68.3mb]->[544.6kb]/[273mb]}{[survivor] [6.5mb]->[8.5mb]/[34.1mb]}{[old] [37.3mb]->[42.7mb]/[682.6mb]}

@@ -1,0 +1,27 @@
+
+    <div class="reviews" style="margin-left:25px">
+        <div class="star-rating" data-score= <%= review.rating %> ></div>
+              
+        <p><%= review.comment %>
+        <% if current_user != nil %>
+            <% if current_user.id == review.user_id %>
+                <%= link_to "Edit", edit_movie_review_path(id: review.id, movie_id: review.movie_id), class:"btn btn-xs" %>
+            <% end %>
+        <% end %>
+        </br>
+        
+        <span style="float: right;"><b><%= review.user.email %></b>: <%= time_ago_in_words(review.created_at)%></span>
+        </p>
+        <hr>
+        </box>
+    </div>  
+    
+<script>
+  $('.star-rating').raty({
+    path: "/assets/",
+    readOnly: true,
+    score: function(){
+      return $(this).attr('data-score');
+    }
+  });
+</script>

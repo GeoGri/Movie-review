@@ -1,0 +1,74 @@
+<!-- < %= form_for (@movie) do |f| %> -->
+<%= simple_form_for @movie, html: { multipart: true } do |f| %>
+  <% if @movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+
+      <ul>
+      <% @movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field form-group">
+    <%= f.label :title %></br>
+    <%= f.text_field :title, class: "form-control", placeholder:"Title" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :description %></br>
+     <%= f.text_area :description, class: "form-control", placeholder:"Decription" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :year %></br>
+    <%= f.text_field :year, class: "form-control", placeholder:"Year" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :trailer_src %></br>
+    <%= f.text_field :trailer_src, class: "form-control", placeholder:"Trailse src" %>
+  </div>
+   <div class="field form-group">
+     <%= f.label :movie_length %></br>
+     <%= f.text_field :movie_length, class: "form-control", placeholder:"Length" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :director %></br>
+    <%= f.text_field :director, class: "form-control", placeholder:"Director" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :scenario %></br>
+    <%= f.text_field :scenario, class: "form-control", placeholder:"Scenario" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :premiere_date %></br>
+    <%= f.date_field :premiere_date, class: "form-control", placeholder:"Premiere date" %>
+  </div>
+  
+  <fieldset id="genres">
+    <ol>
+      <%= f.fields_for :genres_movies do |genre| %>
+        <%= render 'genres_movie_fields', f: genre %>
+      <% end %>
+    </ol>
+    <%= link_to_add_association 'Add genre', f, :genres_movies, 'data-association-insertion-node' => "#genres ol", 'data-association-insertion-method' => "append",wrap_object: Proc.new{ |genre| genre.movie_id = @movie.id; genre }, class: "btn btn-xs" %>
+  </fieldset>
+  
+  <div class="field">
+    <%= f.label :image %></br>
+    
+    <div class="input-group">
+      <span class="input-group-btn">
+        <span class="btn btn-small btn-inverse" onclick="$(this).parent().find('input[type=file]').click();">Browse</span>
+        <%= f.file_field :image, onchange: "$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\\\|/]/).pop());", style: "display: none;" %>
+      </span>
+      <span class="form-control"></span>
+    </div>
+  </div>
+  
+  <div class="actions">
+    <!-- < %= f.submit %> -->
+    <input type="submit" class="btn center-block" style="margin-top:10px" value="Update" />
+  </div>
+<% end %>
+

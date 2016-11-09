@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <%= link_to "Movie Reviews", root_path, class: "navbar-brand", style: "color:#fff" %>
+        </div>
+        
+        <!-- Collect the nav links, form, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav ">
+                <% if user_signed_in? %>
+                    <li><%= link_to "New Movie", new_movie_path, style: "color:#fff"  %></li>
+                    <li><%= link_to  current_user.email, edit_user_registration_path, style: "color:#fff"  %></li>
+                    <li><%= link_to "Log out", destroy_user_session_path,:method => :delete, style: "color:#fff"  %></li>
+                <% else %>
+                    <li><%= link_to "Sign Up", new_user_registration_path, style: "color:#fff"  %></li>
+                    <li><%= link_to "Sign In", new_user_session_path, style: "color:#fff"  %></li>
+                <% end %>
+            </ul>
+            <%= form_tag search_movies_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
+                <p>
+                    <%= text_field_tag :search, params[:search], class: "form-control" , placeholder:"Tab to search"%>
+                    <%= submit_tag "Search", name: nil, class: "btn" %>
+                </p>
+            <% end %>
+            
+            
+            <!-- 
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-defoult">Submit</button>
+            </form>  -->
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

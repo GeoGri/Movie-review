@@ -1,0 +1,18 @@
+[2016-06-24 21:45:46,597][INFO ][node                     ] [Amelia Voght] version[2.3.3], pid[4036], build[218bdf1/2016-05-17T15:40:04Z]
+[2016-06-24 21:45:46,599][INFO ][node                     ] [Amelia Voght] initializing ...
+[2016-06-24 21:45:47,319][INFO ][plugins                  ] [Amelia Voght] modules [lang-groovy, reindex, lang-expression], plugins [], sites []
+[2016-06-24 21:45:47,361][INFO ][env                      ] [Amelia Voght] using [1] data paths, mounts [[/ (none)]], net usable_space [1.7gb], net total_space [2.1gb], spins? [possibly], types [aufs]
+[2016-06-24 21:45:47,361][INFO ][env                      ] [Amelia Voght] heap size [989.8mb], compressed ordinary object pointers [true]
+[2016-06-24 21:45:47,361][WARN ][env                      ] [Amelia Voght] max file descriptors [8192] for elasticsearch process likely too low, consider increasing to at least [65536]
+[2016-06-24 21:45:49,802][INFO ][node                     ] [Amelia Voght] initialized
+[2016-06-24 21:45:49,802][INFO ][node                     ] [Amelia Voght] starting ...
+[2016-06-24 21:45:49,985][INFO ][transport                ] [Amelia Voght] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2016-06-24 21:45:49,990][INFO ][discovery                ] [Amelia Voght] elasticsearch/SH73hAFASSK0iKwW1Q1j0Q
+[2016-06-24 21:45:53,038][INFO ][cluster.service          ] [Amelia Voght] new_master {Amelia Voght}{SH73hAFASSK0iKwW1Q1j0Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-06-24 21:45:53,055][INFO ][http                     ] [Amelia Voght] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2016-06-24 21:45:53,055][INFO ][node                     ] [Amelia Voght] started
+[2016-06-24 21:45:53,125][INFO ][gateway                  ] [Amelia Voght] recovered [1] indices into cluster_state
+[2016-06-24 21:45:53,905][INFO ][cluster.routing.allocation] [Amelia Voght] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies_development_20160612113208392][0]] ...]).
+[2016-06-24 22:31:27,690][WARN ][monitor.jvm              ] [Amelia Voght] [gc][young][2734][6] duration [2s], collections [1]/[2.7s], total [2s]/[2.1s], memory [95.2mb]->[29.4mb]/[989.8mb], all_pools {[young] [68.2mb]->[200.1kb]/[273mb]}{[survivor] [8.3mb]->[8.4mb]/[34.1mb]}{[old] [18.5mb]->[20.7mb]/[682.6mb]}
+[2016-06-24 22:45:06,721][INFO ][cluster.metadata         ] [Amelia Voght] [movies_development_20160612113208392] update_mapping [movie]
+[2016-06-24 23:40:13,204][WARN ][monitor.jvm              ] [Amelia Voght] [gc][young][6847][7] duration [5.3s], collections [1]/[5.9s], total [5.3s]/[7.4s], memory [97.4mb]->[35.4mb]/[989.8mb], all_pools {[young] [68.2mb]->[401.6kb]/[273mb]}{[survivor] [8.4mb]->[8mb]/[34.1mb]}{[old] [20.7mb]->[27mb]/[682.6mb]}

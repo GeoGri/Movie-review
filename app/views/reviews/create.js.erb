@@ -1,0 +1,6 @@
+$('.review_list').prepend("<%= j render @review %>");
+$('#empty_reviews').remove();
+$('#reviews_header').text("Review users who seen this movie:");
+$('#review_area').val("");
+$('#average_review').text("<%=@avarage_rating%>");
+$('#count_review').text("<%= "#{@actual_movies_reviews.length} rewiews" %>");
